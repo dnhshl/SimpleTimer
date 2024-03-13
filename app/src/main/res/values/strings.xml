@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">SimpleTimer</string>
+
+    <string name="timerScreenTitle">Timer</string>
+    <string name="detailsScreenTitle">Details</string>
+    <string name="homeScreenTitle">Meine Termine</string>
+
+    <string name="editToDoScreenTitle">Termin anlegen</string>
+
+    <string name="timerScreenLabel">Timer</string>
+    <string name="detailsScreenLabel">Details</string>
+    <string name="homeScreenLabel">Home</string>
+
+    <string name="menuItem1">Item 1</string>
+    <string name="menuItem2">Item 2</string>
+    <string name="menuItem3">Info</string>
+
+    <string name="dismissButton">Abbruch</string>
+    <string name="confirmButton">OK</string>
+
+    <string name="enterTitleLabel">Todo</string>
+    <string name="enterSubjectLabel">Anmerkungen</string>
+
+    <string name="enterDateLabel">Datum</string>
+    <string name="enterTimeLabel">Zeit</string>
+
+
+    <string name="deleteLabel">lösche</string>
+    <string name="editLabel">bearbeite</string>
+
+
+
+    <string name="noToDoSelected">"Bitte einen Termin auswählen."</string>
+    <string name="timeOver">"Der Termin ist bereits vorbei!"</string>
+
+    <string name="timePickerDialogTitle">Zeit auswählen</string>
+
+
+
+
+
+
+</resources>
