@@ -39,7 +39,7 @@ import androidx.navigation.NavController
 import com.example.simpletimer.R
 import com.example.simpletimer.model.MainViewModel
 import com.example.simpletimer.model.ToDoItem
-import com.example.simpletimer.ui.navigation.NavDestination
+import com.example.simpletimer.ui.navigation.MyNavDestination
 
 
 @Composable
@@ -73,7 +73,7 @@ fun HomeScreen(
                     onDeleteClick = { viewModel.deleteFromList(todo.id) },
                     onEditClick = {
                         viewModel.setCurrentToDo(todo)
-                        navController.navigate(NavDestination.EditToDo.route)
+                        navController.navigate(MyNavDestination.EditToDo.route)
                     }
                 )
             }

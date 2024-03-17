@@ -29,8 +29,8 @@ import com.example.simpletimer.model.MainViewModel
 import com.example.simpletimer.model.ToDoItem
 import com.example.simpletimer.ui.navigation.MyMenu
 import com.example.simpletimer.ui.navigation.MyNavBar
+import com.example.simpletimer.ui.navigation.MyNavDestination
 import com.example.simpletimer.ui.navigation.MyTopBar
-import com.example.simpletimer.ui.navigation.NavDestination
 import com.example.simpletimer.ui.navigation.bottomBarNavDestinations
 import com.example.simpletimer.ui.navigation.dialogDestinations
 import com.example.simpletimer.ui.navigation.navDestinations
@@ -56,7 +56,7 @@ fun MyApp() {
                 FloatingActionButton(
                     onClick = {
                         viewModel.setCurrentToDo(ToDoItem())
-                        navController.navigate(NavDestination.EditToDo.route)
+                        navController.navigate(MyNavDestination.EditToDo.route)
 //                        val date = randomDateString()
 //                        val time= randomTimeString()
 //                        viewModel.addToList(
@@ -100,7 +100,7 @@ fun MyApp() {
     ) { paddingValues ->
         NavHost(
             navController = navController,
-            startDestination = NavDestination.Home.route,
+            startDestination = MyNavDestination.Home.route,
             modifier = Modifier
                 .padding(paddingValues)
         ) {

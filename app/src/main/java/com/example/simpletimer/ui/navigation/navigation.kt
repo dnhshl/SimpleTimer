@@ -15,7 +15,7 @@ import com.example.simpletimer.ui.screens.EditToDoScreen
 import com.example.simpletimer.ui.screens.HomeScreen
 import com.example.simpletimer.ui.screens.TimerScreen
 
-sealed class NavDestination(
+sealed class MyNavDestination(
     val route: String,
     val title: Int = 0,
     val label: Int = 0,
@@ -25,7 +25,7 @@ sealed class NavDestination(
     val showFab: Boolean = false,
     val content: @Composable (NavController, MainViewModel) -> Unit
 ) {
-    object Home : NavDestination(
+    object Home : MyNavDestination(
         route = "home",
         title = R.string.homeScreenTitle,
         label = R.string.homeScreenLabel,
@@ -35,7 +35,7 @@ sealed class NavDestination(
         content = { navController, viewModel -> HomeScreen(navController, viewModel) }
     )
 
-    object Timer : NavDestination(
+    object Timer : MyNavDestination(
         route = "timer",
         title = R.string.timerScreenTitle,
         label = R.string.timerScreenLabel,
@@ -44,7 +44,7 @@ sealed class NavDestination(
         content = { navController, viewModel -> TimerScreen(navController, viewModel) }
     )
 
-    object EditToDo : NavDestination(
+    object EditToDo : MyNavDestination(
         route = "edit_to_do",
         title = R.string.editToDoScreenTitle,
         content = { navController, viewModel -> EditToDoScreen(navController, viewModel) }
@@ -54,21 +54,21 @@ sealed class NavDestination(
 
 // Hier alle Bildschirme listen, über die in der Bottom Bar navigiert werden soll
 val bottomBarNavDestinations = listOf(
-    NavDestination.Home,
-    NavDestination.Timer
+    MyNavDestination.Home,
+    MyNavDestination.Timer
 )
 
 // Hier alle Bildschirme listen, die als FullScreen Bildschirm angesprungen werden sollen
 // wenn es keine gibt, dann
-// val otherDestinations = emptyList<NavDestination>()
+// val otherDestinations = emptyList<MyNavDestination>()
 val otherDestinations = listOf(
-    NavDestination.EditToDo
+    MyNavDestination.EditToDo
 )
 
 val navDestinations = bottomBarNavDestinations + otherDestinations
 
 // Hier alle Dialogbilschirme listen
 // wenn es keine gibt, dann
-// val dialogDestinations = emptyList<NavDestination>()
-val dialogDestinations = emptyList<NavDestination>()
+// val dialogDestinations = emptyList<MyNavDestination>()
+val dialogDestinations = emptyList<MyNavDestination>()
 

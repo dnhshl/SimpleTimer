@@ -21,7 +21,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 @Composable
 fun MyTopBar(
     navController: NavController,
-    screens: List<NavDestination>,
+    screens: List<MyNavDestination>,
     onMenuClick: () -> Unit,
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
